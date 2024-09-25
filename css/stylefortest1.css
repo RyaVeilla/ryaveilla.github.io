@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Poppins', sans-serif ;
+}
+
+body {
+    background: rgb(55, 73, 96);
+    color: aliceblue;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(30, 133, 243);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: aquamarine;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: rgb(61, 0, 173);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 1.0s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: aqua;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+
+    /* Awalnya disembunyikan dengan opacity 0 */
+    opacity: 0;
+    transform: translateY(30px); /* Mulai sedikit di bawah */
+    animation: fadeInSection 2s ease-in-out forwards;
+}
+
+/* Keyframes untuk animasi faded */
+@keyframes fadeInSection {
+    from {
+        opacity: 0; /* Transparan di awal */
+        transform: translateY(30px); /* Bergerak dari bawah */
+    }
+    to {
+        opacity: 1; /* Terlihat penuh */
+        transform: translateY(0); /* Kembali ke posisi aslinya */
+    }
+}
+
+
+.home-content{
+    background-color: rgba(0, 255, 174, 0);
+}
+
+.home-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: aquamarine;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: rgb(0, 255, 234);
+    border: 2px solid rgb(49, 132, 137);
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* warna teks dan warna bg */
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.btn-box a:nth-child(2):hover {
+    color: black;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: rgb(0, 255, 234);
+}
+
+/* warna dari animasi dan ukuran dari animasi serta layer dari animasi */
+.btn-box a::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(55, 73, 96);
+    z-index: -1;  /* LAYER*/
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+#section1 {
+    border: 2px solid black;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#section1:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#section2 {
+    border: 2px solid black;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#section2:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+#section3 {
+    border: 2px solid black;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#section3:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-around; /* Agar section memiliki jarak yang seimbang di antara mereka */
+    align-items: center; /* Menyelaraskan section secara vertikal */
+    padding: 50px 10%;
+}
+
+.sections-container div {
+    margin: 10px;
+    
+}
+
+.sections-container {
+    background-color: rgb(84, 148, 197);
+}
+
+#section1, #section2, #section3 {
+    border: 2px solid black;
+    padding: 20px;
+    width: 400px; /* Perbesar lebar */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-image: url(awan1.jpg);
+
+    /* Animasi memudar */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.2s; /* Bisa sesuaikan agar animasinya berurutan */
+}
+
+#section1:hover, #section2:hover, #section3:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-between; /* Sebar section agar ada jarak */
+    align-items: center; 
+    padding: 10px 10%;
+    gap: 20px; /* Jarak antar section */
+    flex-wrap: wrap; /* Agar responsif dan tetap sejajar */
+}
+
+/* Keyframes untuk fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Memulai dari sedikit di bawah */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Kembali ke posisi aslinya */
+    }
+}
+
+
+.singkatan {
+    text-align: center;
+}
+
+.sections-container div {
+    margin: 10px;
+}
+
+.sections-container {
+    background-color: rgb(55, 73, 96);
+}
+
+.home-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 0px;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+}
+
+.about-bio {
+    margin: 100px;
+    padding: 100px;
+    border: solid;
+    background-image: url(bg-bio1.jpg);
+    color: black;
+    font-size: medium;
+    
+    /* Animasi */
+    animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
+}
+
+/* Keyframes untuk fade in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes untuk slide in effect dari bawah */
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+.section-bio {
+    background-image: url(Bio-sec2.jpg);
+    font-size: larger;
+    color: black;
+    padding: 100px;
+    text-align: right;
+    margin: 100px;
+    padding: 100px;
+    border: solid;
+}
+
+.section-skill {
+    margin: 100px;
+    padding: 100px;
+    border: black solid;
+    font-size: large;
+    text-align: center;
+    background-image: url(shinji.gif);
+    color: aliceblue;
+}
+
+.section-fav {
+    text-align: center;
+}
+
+.section-fav {
+    border: solid black;
+    margin: 100px;
+    padding: 100px;
+}
+
+.gambar-fav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gambar-kecil {
+    width: 50%; /* Sesuaikan dengan ukuran yang diinginkan */
+  }
+
+  .penutup {
+    text-align: center;
+    text-decoration: underline;
+
+  }
+
+  footer {
+    text-align: left;
+    padding: 50px;
+    background-color: gray;
+    text-decoration: none;
+  }
+
+  .form-section {
+    width: 50%; 
+    margin: 50px auto; 
+    border: 3px solid #000000; 
+    border-radius: 5px; 
+    background-color: #85c5d2; 
+
+  }
